@@ -1,2 +1,2 @@
 # -service
-Laravel 5.8 Servise web site
+Laravel 5.8 Service web site
