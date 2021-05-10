@@ -80,7 +80,7 @@
 			<nav class="site-nav-menu">
 				<ul>
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
+					<li><a href="{{route('users.service')}}">Xizmatlar</a></li>
 					<li><a href="solutions.html">Solutions</a>
 						<ul class="sub-menu">
 							<li><a href="elements.html">Elements</a></li>

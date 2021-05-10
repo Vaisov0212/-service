@@ -14,7 +14,11 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::namespace('Users')->name('users.')->prefix('/users')->group(function(){
 
+   Route::get('/service','SiteController@service')->name('service');
+
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
