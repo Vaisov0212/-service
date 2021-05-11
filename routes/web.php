@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'SiteController@index')->name('index');
+Route::get('/About-us', 'SiteController@about_us')->name('aboutUs');
 Route::get('/Service', 'SiteController@service')->name('service');
 
 Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(){

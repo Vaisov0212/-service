@@ -79,9 +79,9 @@
 			<!-- Menu -->
 			<nav class="site-nav-menu">
 				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="{{route('service')}}">Xizmatlar</a></li>
-					<li><a href="solutions.html">Solutions</a>
+					<li class="active"><a href="{{route('index')}}">Bosh sahifa</a></li>
+					<li><a href="{{route('aboutUs')}}">Biz xaqimizda</a></li>
+					<li><a href="{{route('service')}}">Xizmatlar</a>
 						<ul class="sub-menu">
 							<li><a href="elements.html">Elements</a></li>
 						</ul>

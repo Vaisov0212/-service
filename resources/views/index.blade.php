@@ -1,6 +1,6 @@
 @include('layouts/header')
 
-<!-- Hero section  -->
+	<!-- Hero section  -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
 			<div class="hero-item set-bg" data-setbg="img/hero-slider/1.jpg">
@@ -222,22 +222,6 @@
 	</section>
 	<!-- Testimonial section end  -->
 
-
-	<!-- Call to action section  -->
-	<section class="cta-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 d-flex align-items-center">
-					<h2>We produce or supply Goods, Services, or Sources</h2>
-				</div>
-				<div class="col-lg-3 text-lg-right" >
-					<a href="#" class="site-btn sb-dark">contact us</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Call to action section end  -->
-
 	<!-- Video section  -->
 	<section class="video-section spad" >
 		<div class="container">
@@ -261,4 +245,6 @@
 	</section>
 	<!-- Video section end  -->
 
-    @include('layouts/footer')
+
+
+@include('layouts/footer')
