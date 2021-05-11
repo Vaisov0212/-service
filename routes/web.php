@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::namespace('Users')->name('users.')->prefix('/users')->group(function(){
+Route::get('/', 'SiteController@index')->name('index');
+Route::get('/Service', 'SiteController@service')->name('service');
 
-   Route::get('/service','SiteController@service')->name('service');
+Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(){
+    Route::get('/', function(){
+        return view('admin.index');
+    });
 
 });
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
