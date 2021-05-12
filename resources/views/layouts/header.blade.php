@@ -20,7 +20,6 @@
 	<link rel="stylesheet" href="/css/slicknav.min.css"/>
 	<link rel="stylesheet" href="/css/owl.carousel.min.css"/>
 
-
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 

@@ -111,5 +111,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
 
+
+
 	</body>
 </html>

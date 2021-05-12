@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Feddback;
 class FeedbackController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        //
+        $feedback=Feddback::all();
+        return view('admin.feedback.index', compact('feedback'));
     }
 
     /**

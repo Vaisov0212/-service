@@ -23,7 +23,7 @@ Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(
         return view('admin.index');
     });
 
-    Route::resourse('/feedback','FeedbackController');
+    Route::resource('/feedback','FeedbackController');
 
 });
 Auth::routes();
