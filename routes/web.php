@@ -11,14 +11,19 @@
 |
 */
 
+use App\Feddback;
+
 Route::get('/', 'SiteController@index')->name('index');
 Route::get('/About-us', 'SiteController@about_us')->name('aboutUs');
 Route::get('/Service', 'SiteController@service')->name('service');
+Route::post('/Reference','SiteController@reference')->name('reference');
 
 Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(){
     Route::get('/', function(){
         return view('admin.index');
     });
+
+    Route::resourse('/feedback','FeedbackController');
 
 });
 Auth::routes();

@@ -1,5 +1,6 @@
 @include('layouts/header')
 
+
 	<!-- Page top section  -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/2.jpg">
 		<div class="container">
@@ -13,7 +14,29 @@
 		</div>
 	</section>
 	<!-- Page top section end  -->
+    <br>
+    <div class="row">
+        <div class="col-lg-12">
+            @if(count($errors) > 0 )
+            <div class="alert bg-warning" role="alert"><em class="fa fa-lg fa-warning">&nbsp;</em>
+                <ul>
+                     @foreach($errors->all() as $error )
+                     <li>{{$error }} </li>
+                     @endforeach
 
+               </ul>
+              </div>
+
+            @endif
+            @if(\Session::has('success'))
+                <div style="padding: 10px; text-align:center;">
+                    <div class="alert alert-primary" role="alert"><i class=""></i>
+                    {{\Session::get('success')}}
+                    </div>
+                </div>
+            @endif
+        </div>
+    </div><!--/.row-->
 	<!-- Services section  -->
 	<section class="services-2-section spad">
 		<div class="container">
@@ -157,5 +180,72 @@
 		</div>
 	</section>
 	<!-- Reserch section end  -->
+
+
+	<!-- Contact section   -->
+	<section class="contact-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="contact-text">
+						<h2>Get in Touch</h2>
+						<p> blandit sollicitudin estst quis, blandit sollicitudi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin estst quis, blandit sollicitudi</p>
+						<div class="header-info-box">
+							<div class="hib-icon">
+								<img src="img/icons/phone.png" alt="" class="">
+							</div>
+							<div class="hib-text">
+								<h6>+546 990221 123</h6>
+								<p>contact@industryalinc.com</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-lg-8">
+					<form class="contact-form" action="{{route('reference')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+						<div class="row">
+							<div class="col-lg-6">
+								<input type="text" name="name" placeholder="ism familya" required>
+							</div>
+							<div class="col-lg-6">
+								<div class="col-auto">
+                                    <div class="input-group mb-2">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text" style=" border: none;border-bottom: 3px solid #c3dff5;background-color: #f7fafd">+998</div>
+                                      </div>
+                                      <input type="number" name="phone" class="form-control" id="inlineFormInputGroup" placeholder="tel:" required="">
+                                    </div>
+                                  </div>
+							</div>
+                            <div class="col-lg-6">
+								<input type="text" name="organization" placeholder="idora tashkilot nomi" required="">
+							</div>
+							<div class="col-lg-6">
+								<select name="service_type" style=" width: 100%; height: 54px;    padding: 10px ;font-size: 14px;
+                                font-weight: 500;font-style: italic;color: #718090; border: none; background: #f7fafd;
+                                 border-bottom: 3px solid #c3dff5; " aria-describedby="validationServer04Feedback" required>
+                                    <option selected required>xizmat turini tanlang</option>
+                                    <option value="texnik xizmat">texnik xizmat</option>
+                                    <option value="yangilash">yangilash</option>
+                                    <option value="o'rnatib berish">o'rnatib berish</option>
+                                  </select>
+							</div>
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-12">
+								<input type="text" name="address" placeholder="to'liq manzil..." required="">
+								<button class="site-btn" type="submit">jo'natish</button>
+							</div>
+						</div>
+				    </div>
+                </form>
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end  -->
+
 
         @include('layouts/footer')

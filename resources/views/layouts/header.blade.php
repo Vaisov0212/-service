@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="Uz">
 <head>
 	<title>Industry.INC | HTML Template</title>
 	<meta charset="UTF-8">
@@ -14,11 +14,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/magnific-popup.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/css/magnific-popup.css"/>
+	<link rel="stylesheet" href="/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="/css/owl.carousel.min.css"/>
+
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
@@ -45,7 +46,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
 					<div class="col-md-6 text-md-right">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
 					</div>
 				</div>
 			</div>
@@ -55,23 +56,20 @@
 			<a href="index.html" class="site-logo">
 				<img src="img/logo.png" alt="">
 			</a>
+            <a href="index.html">
+				Uz
+			</a>
+            <a href="index.html">
+				Ru
+			</a>
 			<div class="header-right">
 				<div class="header-info-box">
-					<div class="hib-icon">
+                    <div class="hib-icon">
 						<img src="img/icons/phone.png" alt="" class="">
 					</div>
 					<div class="hib-text">
 						<h6>+546 990221 123</h6>
 						<p>contact@industryalinc.com</p>
-					</div>
-				</div>
-				<div class="header-info-box">
-					<div class="hib-icon">
-						<img src="img/icons/map-marker.png" alt="" class="">
-					</div>
-					<div class="hib-text">
-						<h6>Main Str, no 23</h6>
-						<p>NY, New York PK 23589</p>
 					</div>
 				</div>
 				<button class="search-switch"><i class="fa fa-search"></i></button>
@@ -88,6 +86,7 @@
 					</li>
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="contact.html">Contact</a></li>
+
 				</ul>
 			</nav>
 
