@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Feddback extends Model
+class Feedback extends Model
 {
     public $table='feedback';
     public $fillable=[
@@ -12,6 +12,7 @@ class Feddback extends Model
         'phone',
         'organization',
         'service_type',
-        'address'
+        'address',
+        'report'
     ];
 }

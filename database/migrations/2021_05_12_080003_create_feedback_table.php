@@ -18,8 +18,9 @@ class CreateFeedbackTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('organization');
-            $table->string('service_type')->nullable();
+            $table->string('service_type');
             $table->string('address');
+            $table->boolean('report');
             $table->timestamps();
         });
     }

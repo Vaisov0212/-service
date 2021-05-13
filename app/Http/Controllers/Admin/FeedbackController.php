@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Feddback;
+use App\Feedback;
 class FeedbackController extends Controller
 {
     /**
@@ -13,73 +13,39 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        $feedback=Feddback::all();
+        $feedback=Feedback::all();
         return view('admin.feedback.index', compact('feedback'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function show($id)
     {
-        //
+        $feedback=Feedback::findOrFail($id);
+        $feedback->update(['report'=>true ]);
+        return view('admin.feedback.show', compact('feedback'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $feedback=Feedback::findOrFail($id);
+        $feedback->delete();
+        return redirect()->back()->with('delete','Malumot o`chirildi !');
     }
 }

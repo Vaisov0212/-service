@@ -10,6 +10,10 @@
     <meta name="description"
         content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
+
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> --}}
+
+
     <title>My Admin Template by WrapPixel</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" />
     <!-- Favicon icon -->
@@ -24,12 +28,14 @@
     <link href="/admin/css/style.css" rel="stylesheet">
 
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 </head>
 
 <body>
@@ -47,7 +53,7 @@
                             class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">My Admin</span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a href="javascript:void(0)" class="open-close hidden-xs hidden-lg
- waves-effect waves-light"><i class="ti-arrow-circle-left ti-menu"></i>
+                        waves-effect waves-light"><i class="ti-arrow-circle-left ti-menu"></i>
                         </a></li>
                 </ul>
                 <ul class="nav navbar-top-links navbar-right pull-right">
@@ -85,27 +91,32 @@
                         </div>
                     </li>
                     <li>
-                        <a href="dashboard.html" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
-                            Dashboard</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="dashboard.html" class="waves-effect ">
+                            <i class="glyphicon glyphicon-fire fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="ti-user fa-fw"></i>Profile</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="profile.html" class="waves-effect">
+                            <i class="ti-user fa-fw"></i>Profile</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="ti-layout fa-fw"></i>Basic-Table</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="basic-table.html" class="waves-effect">
+                            <i class="ti-layout fa-fw"></i>Basic-Table</a>
                     </li>
                     <li>
-                        <a href="themifyicon.html" class="waves-effect"><i class="ti-face-smile fa-fw"></i> Icons</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="themifyicon.html" class="waves-effect">
+                            <i class="ti-face-smile fa-fw"></i> Icons</a>
                     </li>
                     <li>
-                        <a href="map-google.html" class="waves-effect"><i class="ti-location-pin fa-fw"></i> Google
-                            Map</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="map-google.html" class="waves-effect">
+                            <i class="ti-location-pin fa-fw"></i> Google Map</a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="ti-files fa-fw"></i> Blank Page</a>
+                        <a @if($title=="Xbarlar") class="active" @endif  href="blank.html" class="waves-effect">
+                            <i class="ti-email fa-fw"></i> Xbarlar</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="ti-info fa-fw"></i> Error 404</a>
+                        <a @if($title=="Dashboard") class="active" @endif  href="404.html" class="waves-effect">
+                            <i class="ti-info fa-fw"></i> Error 404</a>
                     </li>
                 </ul>
             </div>
