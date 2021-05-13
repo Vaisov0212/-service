@@ -226,8 +226,8 @@
 							<div class="col-lg-6">
 								<select name="service_type" style=" width: 100%; height: 54px;    padding: 10px ;font-size: 14px;
                                 font-weight: 500;font-style: italic;color: #718090; border: none; background: #f7fafd;
-                                 border-bottom: 3px solid #c3dff5; " aria-describedby="validationServer04Feedback" required>
-                                    <option selected required>xizmat turini tanlang</option>
+                                 border-bottom: 3px solid #c3dff5; " aria-describedby="validationServer04Feedback">
+
                                     <option value="texnik xizmat">texnik xizmat</option>
                                     <option value="yangilash">yangilash</option>
                                     <option value="o'rnatib berish">o'rnatib berish</option>

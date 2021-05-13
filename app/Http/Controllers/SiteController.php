@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Feddback;
 use Illuminate\Http\Request;
-
+use App\Services\SendTelegramService;
 class SiteController extends Controller
 {
     public function index(){
@@ -21,7 +21,8 @@ class SiteController extends Controller
     }
 
     public function reference(Request $request){
-        $this->validate($request,[
+
+        $data=$request->validate([
             'name'=>'required',
             'phone'=>'required',
             'organization'=>'required',
@@ -29,14 +30,20 @@ class SiteController extends Controller
             'address'=>'required'
         ]);
         // dd($request);
-        $feedback=new Feddback([
-            'name'=>$request->post('name'),
-            'phone'=>$request->post('phone'),
-            'organization'=>$request->post('organization'),
-            'service_type'=>$request->post('service_type'),
-            'address'=>$request->post('address'),
+            //Formating
+            $message ='Ism: '.$data['name'].PHP_EOL;
+            $message .='Xizmat turi:'.$data['service_type'].PHP_EOL;
+            $message .='Telefon raqam:'.$data['phone'].PHP_EOL;
+            $message .='Manzil: '.$data['address'];
+
+            Feddback::create([
+            'name'=>$data['name'],
+            'phone'=>$data['phone'],
+            'organization'=>$data['service_type'],
+            'address'=>$data['address']
         ]);
-        $feedback->save();
+        //sendToTelegram_bot
+        SendTelegramService::send($message);
 
         return redirect()->back()->with('success','Xabaringgiz jo`natildin bir ozdan so`ng hodimlarimiz siz bilan  bog`lanishadi.!');
     }
