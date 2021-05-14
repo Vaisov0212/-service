@@ -10,7 +10,7 @@
                 <ol class="breadcrumb">
                     <li><a href="#">Uy Sahifa</a></li>
                     <li><a href="{{route('admin.feedback.index')}}">Xabarlar</a></li>
-                    <li><a class="active">{{$feedback->id}}</a></li>
+                    <li><a class="active">s{{$feedback->id}}</a></li>
                 </ol>
             </div>
             <!-- /.col-lg-12 -->

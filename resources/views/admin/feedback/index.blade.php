@@ -74,6 +74,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -81,6 +82,7 @@
     </div>
     <!-- /.container-fluid -->
 </div>
+
 <!-- /#page-wrapper -->
 {{-- <script src="/admin/js/modal.js"></script> --}}
 @include('admin.app.footer')

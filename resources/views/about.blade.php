@@ -1,3 +1,4 @@
+<?php $title="about" ?>
 @include('layouts/header')
     <!-- Page top section  -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">

@@ -18,7 +18,7 @@ Route::get('/About-us', 'SiteController@about_us')->name('aboutUs');
 Route::get('/Service', 'SiteController@service')->name('service');
 Route::post('/Reference','SiteController@reference')->name('reference');
 
-Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(){
+Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('/dashboard')->group(function(){
     Route::get('/', function(){
         return view('admin.index');
     });
@@ -27,4 +27,4 @@ Route::namespace('Admin')->name('admin.')->prefix('/dashboard')->group(function(
 
 });
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
