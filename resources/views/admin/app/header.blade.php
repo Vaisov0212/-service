@@ -54,7 +54,7 @@
                     href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
                         class="ti-menu"></i></a>
                 <div class="top-left-part"><a class="logo" href="dashboard.html"><i
-                            class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">My Admin</span></a></div>
+                            class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">INC Admin</span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a href="javascript:void(0)" class="open-close hidden-xs hidden-lg
                         waves-effect waves-light"><i class="ti-arrow-circle-left ti-menu"></i>
@@ -74,9 +74,17 @@
                     </li>
 
                     <li>
-                        <a class="profile-pic" href="#"> <img src="/admin/images/users/hritik.jpg" alt="/admin/user-img" width="36"
-                                class="img-circle"><b class="hidden-xs">Maruti</b> </a>
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="profile-pic" href="#">
+                             <img src="/admin/images/users/hritik.jpg" alt="/admin/user-img" width="36"
+                                class="img-circle"><b class="hidden-xs">Maruti</b></a>
+                    </li>
+                    <li>
+                        <div style="padding: 5px; margin:5px" >
+                        <form   action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button style="color:rgb(67, 24, 224)" type="submit" class="ti-power-off btn btn-info"></button>
+                        </form>
+                    </div>
                     </li>
                 </ul>
             </div>
@@ -123,6 +131,7 @@
                         <a @if($title=="Dashboard") class="active" @endif  href="404.html" class="waves-effect">
                             <i class="ti-info fa-fw"></i> Error 404</a>
                     </li>
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

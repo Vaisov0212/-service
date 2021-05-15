@@ -39,8 +39,8 @@
                                     <th>Ism, familya</th>
                                     <th>Xizmat turi</th>
                                     <th>telefon raqami</th>
-                                    <th>qabul qilinan vaqt</th>
-                                    <th>ko'rish </th>
+                                    <th>qabul qilingan vaqt</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>

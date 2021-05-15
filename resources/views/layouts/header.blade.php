@@ -71,6 +71,15 @@
 						<p>contact@industryalinc.com</p>
 					</div>
 				</div>
+                <div class="header-info-box">
+                    <div class="hib-icon">
+						<img src="img/icons/phone.png" alt="" class="">
+					</div>
+					<div class="hib-text">
+						<h6>+546 990221 123</h6>
+						<p>contact@industryalinc.com</p>
+					</div>
+				</div>
 				<button class="search-switch"><i class="fa fa-search"></i></button>
 			</div>
 			<!-- Menu -->
