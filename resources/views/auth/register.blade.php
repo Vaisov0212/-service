@@ -36,7 +36,7 @@
 </head>
 <body>
     <section >
-        <img id="wrapper" class="login-register" src="/admin/images/big/img1.jpg">
+        <img id="wrapper" class="login-register" src="{{asset('/admin/images/big/img1.jpg')}}">
     <div class="login-box">
         {{-- <img id="wrapper" src="/admin/images/big/img1.jpg"> --}}
       <div class="white-box">
@@ -86,28 +86,22 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"  placeholder="confirm password">
             </div>
           </div>
-          <div class="form-group ">
-            <div class="col-xs-12">
-              <div class="checkbox checkbox-primary">
-                <input id="checkbox-signup" type="checkbox">
-                <label for="checkbox-signup"> By clicking Sign Up, you agree to our <a href="#">Terms</a> </label>
-              </div>
-            </div>
+         <div class="form-group ">
+
           </div>
           <div class="form-group text-center m-t-40">
             <div class="col-xs-12">
-              <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Sign Up</button>
+              <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Ro'yhatdan o'tish</button>
             </div>
           </div>
           <div class="form-group m-t-30 m-b-0">
             <div class="col-sm-12 text-center">
-              <p>Have account already? Please go to<a href="login.html" class="text-primary m-l-5"><b>Log In</b></a></p>
+              <p>Ro'yhatdan o'tganmisiz ?<a href="{{route('login')}}" class="text-primary m-l-5"><b>Kirish</b></a></p>
             </div>
           </div>
         </form>
       </div>
-    <footer class="footer text-center"> 2020 &copy; Myadmin brought to you by <a
-        href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
+    <footer class="footer text-center"> 2021 &copy; Myadmin</footer>
     </div>
     </section>
     <!-- /#wrapper -->

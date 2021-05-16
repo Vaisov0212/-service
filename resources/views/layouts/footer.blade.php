@@ -76,15 +76,6 @@
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
-				<div class="col-lg-7 order-1 order-lg-2 p-0">
-					<ul class="footer-menu">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">About us</a></li>
-						<li><a href="solutions.html">Solutions</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 		</div>
@@ -111,7 +102,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
 
-
-
-	</body>
+</body>
 </html>

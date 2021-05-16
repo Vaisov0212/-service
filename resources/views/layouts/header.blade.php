@@ -10,6 +10,7 @@
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
+
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
@@ -62,24 +63,6 @@
 				Ru
 			</a>
 			<div class="header-right">
-				<div class="header-info-box">
-                    <div class="hib-icon">
-						<img src="img/icons/phone.png" alt="" class="">
-					</div>
-					<div class="hib-text">
-						<h6>+546 990221 123</h6>
-						<p>contact@industryalinc.com</p>
-					</div>
-				</div>
-                <div class="header-info-box">
-                    <div class="hib-icon">
-						<img src="img/icons/phone.png" alt="" class="">
-					</div>
-					<div class="hib-text">
-						<h6>+546 990221 123</h6>
-						<p>contact@industryalinc.com</p>
-					</div>
-				</div>
 				<button class="search-switch"><i class="fa fa-search"></i></button>
 			</div>
 			<!-- Menu -->
@@ -88,12 +71,28 @@
 					<li @if($title=="index") class="active" @endif><a href="{{route('index')}}">Bosh sahifa</a></li>
 					<li @if($title=="about") class="active" @endif><a href="{{route('aboutUs')}}">Biz xaqimizda</a></li>
 					<li @if($title=="service") class="active" @endif><a href="{{route('service')}}">Xizmatlar</a>
-						<ul class="sub-menu">
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
 					</li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="blog.html">Market</a></li>
+					<li><a href="contact.html">Bog'lanish</a></li>
+
+                    @if($user==null)
+					<li ><a href="{{route('login')}}" >kirish</a></li>
+					<li><a {{route('register')}} >ro'yhatdan o'tish</a></li>
+                     @endif
+                     @auth
+                    <li><a >{{$user->name}}</a>
+						<ul class="sub-menu" >
+                            <li><button class="btn btn-succes"  type="submit"><a >profil</a></button></li>
+							<li><button class="btn btn-succes"  type="submit"><a >savatcha</a></button></li>
+                            <form method="post" action="{{route('logout')}}">
+                             @csrf
+
+                            <li><button class="btn btn-succes"  type="submit"><a >chiqish</a></button></li>
+                            </form>
+
+						</ul>
+                        @endauth
+					</li>
 
 				</ul>
 			</nav>

@@ -4,20 +4,25 @@ namespace App\Http\Controllers;
 use App\Feedback;
 use Illuminate\Http\Request;
 use App\Services\SendTelegramService;
+use \App\User;
 class SiteController extends Controller
 {
     public function index(){
-        return view('index');
+         $user=$this->getUser();
+        //  dd($user);
+        return view('index', compact('user'));
     }
 
 
 
     public function about_us(){
-        return view('about');
+        $user=$this->getUser();
+        return view('about',compact('user'));
     }
 
     public function service(){
-        return view('service');
+        $user=$this->getUser();
+        return view('service',compact('user'));
     }
 
     public function reference(Request $request){
@@ -50,4 +55,15 @@ class SiteController extends Controller
 
         return redirect()->back()->with('success','Xabaringgiz jo`natildi bir ozdan so`ng hodimlarimiz siz bilan  bog`lanishadi.!');
     }
+
+        protected function getUser(){
+            if(auth()->user()){
+                $user_id=auth()->user()->id;
+                $user=User::findOrFail($user_id);
+                return $user;
+            }
+            else{
+                return $user=null;
+            }
+        }
 }
