@@ -70,9 +70,8 @@
 				<ul>
 					<li @if($title=="index") class="active" @endif><a href="{{route('index')}}">Bosh sahifa</a></li>
 					<li @if($title=="about") class="active" @endif><a href="{{route('aboutUs')}}">Biz xaqimizda</a></li>
-					<li @if($title=="service") class="active" @endif><a href="{{route('service')}}">Xizmatlar</a>
-					</li>
-					<li><a href="blog.html">Market</a></li>
+					<li @if($title=="service") class="active" @endif><a href="{{route('service')}}">Xizmatlar</a></li>
+                    <li @if($title=="Market") class="active" @endif><a href="{{route('market')}}">Market</a></li>
 					<li><a href="contact.html">Bog'lanish</a></li>
 
                     @if($user==null)

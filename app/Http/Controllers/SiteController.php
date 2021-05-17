@@ -56,6 +56,11 @@ class SiteController extends Controller
         return redirect()->back()->with('success','Xabaringgiz jo`natildi bir ozdan so`ng hodimlarimiz siz bilan  bog`lanishadi.!');
     }
 
+    public function shop(){
+        $user=$this->getUser();
+        return view('market',compact('user'));
+    }
+
         protected function getUser(){
             if(auth()->user()){
                 $user_id=auth()->user()->id;

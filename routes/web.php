@@ -17,6 +17,7 @@ Route::get('/', 'SiteController@index')->name('index');
 Route::get('/About-us', 'SiteController@about_us')->name('aboutUs');
 Route::get('/Service', 'SiteController@service')->name('service');
 Route::post('/Reference','SiteController@reference')->name('reference')->middleware('user');
+Route::get('Market','SiteController@shop')->name('market');
 
 Route::namespace('Admin')->middleware('admin')->name('admin.')->prefix('/dashboard')->group(function(){
     Route::get('/', function(){
