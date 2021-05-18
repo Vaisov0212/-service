@@ -11,13 +11,6 @@
         content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
 
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
- integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
- integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <title>My Admin Template by WrapPixel</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" />
     <!-- Favicon icon -->
@@ -31,63 +24,49 @@
     <!-- Custom CSS -->
     <link href="/admin/css/style.css" rel="stylesheet">
 
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="cssload-speeding-wheel"></div>
-    </div>
-    <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
-            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg "
-                    href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="dashboard.html"><i
-                            class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">INC Admin</span></a></div>
-                <ul class="nav navbar-top-links navbar-left hidden-xs">
-                    <li><a href="javascript:void(0)" class="open-close hidden-xs hidden-lg
-                        waves-effect waves-light"><i class="ti-arrow-circle-left ti-menu"></i>
-                        </a></li>
-                </ul>
-                <ul class="nav navbar-top-links navbar-right pull-right">
-                    <li>
-                        <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control">
-                            <a href=""><i class="ti-search"></i></a>
-                        </form>
-                    </li>
-                    <li>
-                        <div class="profile-pic"><a href="#">
-                            <em class="ti-email"></em> <strong>12</strong>
-                        </a></div>
-                    </li>
+ <!-- Preloader -->
+<div class="preloader" style="display: none;">
+    <div class="cssload-speeding-wheel"></div>
+</div>
+<div id="wrapper">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
+    <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+      <div class="top-left-part"><a class="logo" href=""><i class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">My Admin</span></a></div>
+      <ul class="nav navbar-top-links navbar-left hidden-xs">
+        <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
+        <li class="dropdown"> <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href=""><i class="ti-bell" style="color:blue   "  ></i> <span class="badge badge-xs badge-warning">5</span></a>
 
-                    <li>
-                        <a class="profile-pic" href="#">
-                             <img src="/admin/images/users/hritik.jpg" alt="/admin/user-img" width="36"
-                                class="img-circle"><b class="hidden-xs">Maruti</b></a>
-                    </li>
-                    <li>
-                        <div style="padding: 5px; margin:5px" >
-                        <form   action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button style="color:rgb(67, 24, 224)" type="submit" class="ti-power-off btn btn-info"></button>
-                        </form>
-                    </div>
-                    </li>
-                </ul>
-            </div>
+          <!-- /.dropdown-messages -->
+        </li>
+        <!-- /.dropdown -->
+
+        <!-- /.dropdown -->
+      </ul>
+      <ul class="nav navbar-top-links navbar-right pull-right active">
+        <li class="in">
+          <form role="search" class="app-search hidden-xs">
+            <input type="text" placeholder="Search..." class="form-control">
+            <a href="" class="active"><i class="ti-search"></i></a>
+          </form>
+        </li>
+        <li class="dropdown"> <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href=""> <img src="/admin/images/users/hritik.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Maruti</b> </a>
+          <ul class="dropdown-menu dropdown-user">
+            <li><a href=""><i class="ti-user"></i> My Profile</a></li>
+            <li><a href=""><i class="ti-email"></i> Inbox</a></li>
+            <form action="{{route('logout')}}" method="post" >
+                @csrf
+            <li><button class="btn btn-warning" style="margin-left:15px"  ><i class="ti-power-off" style="color:rgb(218, 29, 23)" ></i><a style="margin-left:10px"> chiqish</a></button></li>
+            </form>
+          </ul>
+          <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+      </ul>
+    </div>
             <!-- /.navbar-header -->
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
@@ -122,6 +101,10 @@
                     <li>
                         <a @if($title=="Dashboard") class="active" @endif  href="map-google.html" class="waves-effect">
                             <i class="ti-location-pin fa-fw"></i> Google Map</a>
+                    </li>
+                    <li>
+                        <a @if($title=="Market") class="active" @endif  href="{{route('admin.market.index')}}" class="waves-effect">
+                            <i class="ti-location-pin fa-fw"></i>Market</a>
                     </li>
                     <li>
                         <a @if($title=="Xbarlar") class="active" @endif  href="blank.html" class="waves-effect">

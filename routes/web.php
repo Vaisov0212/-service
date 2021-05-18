@@ -26,6 +26,7 @@ Route::namespace('Admin')->middleware('admin')->name('admin.')->prefix('/dashboa
 
     Route::resource('/feedback','FeedbackController');
     Route::resource('/profile','ProfileController');
+    Route::resource('/market','ShopController');
 
 });
 Auth::routes();
