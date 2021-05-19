@@ -13,6 +13,6 @@ class Category extends Model
     ];
 
     public function shoping(){
-       return $this->hasMany(Shoping::class,'id','id_cat');
+       return $this->hasMany(Shoping::class,'id_cat','id');
     }
 }

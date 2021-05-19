@@ -1,4 +1,4 @@
-<?php $title="Xbarlar";?>
+<?php $title="Murojatlar";?>
 
 @include('admin.app.header')
 

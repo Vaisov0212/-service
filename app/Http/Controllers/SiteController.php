@@ -1,13 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Category;
 use App\Feedback;
 use Illuminate\Http\Request;
 use App\Services\SendTelegramService;
+use App\Shoping;
 use \App\User;
+use \App\Contact;
 class SiteController extends Controller
 {
-    public function index(){
+    public function index()
+    {
          $user=$this->getUser();
         //  dd($user);
         return view('index', compact('user'));
@@ -15,15 +20,18 @@ class SiteController extends Controller
 
 
 
-    public function about_us(){
+    public function about_us()
+    {
         $user=$this->getUser();
         return view('about',compact('user'));
     }
 
-    public function service(){
+    public function service()
+    {
         $user=$this->getUser();
         return view('service',compact('user'));
     }
+
 
     public function reference(Request $request){
 
@@ -56,9 +64,55 @@ class SiteController extends Controller
         return redirect()->back()->with('success','Xabaringgiz jo`natildi bir ozdan so`ng hodimlarimiz siz bilan  bog`lanishadi.!');
     }
 
-    public function shop(){
+    public function shop($id){
         $user=$this->getUser();
-        return view('market',compact('user'));
+        $category=Category::all();
+        if($id==0){
+            $model=Shoping::orderBy('id','desc')->paginate(12);
+            $links=$model->links();
+        }
+        else{
+        $data=Category::findOrFail($id);
+        $model=$data->shoping()->orderBy('id','desc')->paginate(12);
+            $links=$model->links();
+        }
+
+        return view('market',compact('user','model','links','category'));
+    }
+
+    public function shop_show($id){
+        $user=$this->getUser();
+        $model=Shoping::findOrFail($id);
+        $category=Category::all();
+        return view('market_show',compact('user','model','category'));
+    }
+
+    public function conatct()
+    {
+        $user=$this->getUser();
+        return view('contact',compact('user'));
+    }
+
+    public function contactsef(Request $request)
+    {
+            $this->validate($request,[
+                'name'=>'required|min:3',
+                'email'=>'required|email',
+                'subject'=>'required|max:200',
+                'massege'=>'required|min:5',
+            ]);
+
+            $contact=new Contact([
+                'name'=>$request->post('name'),
+                'email'=>$request->post('email'),
+                'subject'=>$request->post('subject'),
+                'massege'=>$request->post('massege'),
+                'views'=>false
+            ]);
+            $contact->save();
+            return redirect()->back()->with('success','habaringgiz jo`natildi...');
+
+
     }
 
         protected function getUser(){

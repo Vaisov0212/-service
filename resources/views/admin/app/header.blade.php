@@ -12,7 +12,7 @@
     <meta name="robots" content="noindex,nofollow">
 
     <title>My Admin Template by WrapPixel</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" />
+    {{-- <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" /> --}}
     <!-- Favicon icon -->
     <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
     <!-- Bootstrap Core CSS -->
@@ -107,7 +107,11 @@
                             <i class="ti-location-pin fa-fw"></i>Market</a>
                     </li>
                     <li>
-                        <a @if($title=="Xbarlar") class="active" @endif  href="blank.html" class="waves-effect">
+                        <a @if($title=="Murojatlar") class="active" @endif  href="{{route('admin.feedback.index')}}" class="waves-effect">
+                            <i class="ti-email fa-fw"></i> Xbarlar</a>
+                    </li>
+                    <li>
+                        <a @if($title=="Xbarlar") class="active" @endif  href="{{route('admin.contact-us.index')}}" class="waves-effect">
                             <i class="ti-email fa-fw"></i> Xbarlar</a>
                     </li>
                     <li>

@@ -69,18 +69,16 @@
                       <textarea class="form-control" name="description" rows="5" placeholder="detal malumotllari" required></textarea>
                     </div>
                   </div>
-                   {{-- <div class="form-group">
-                    <label class="col-sm-12">Input Select</label>
+                   <div class="form-group">
+                    <label class="col-sm-12">Turkum</label>
                     <div class="col-sm-12">
-                      <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                      <select name="id_cat" class="form-control">
+                          @foreach ($category as $item)
+                           <option value="{{$item->id}}" >{{$item->name}}</option>
+                          @endforeach
                       </select>
                     </div>
-                  </div> --}}
+                  </div>
                   <div class="form-group">
                     <label class="col-sm-12">Rasm yuklash</label>
                     <div class="col-sm-12">

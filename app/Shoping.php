@@ -16,7 +16,7 @@ class Shoping extends Model
    ];
 
    public function category(){
-       return $this->hasOne(Category::class, 'id_cat', 'id');
+       return $this->hasOne(Category::class, 'id', 'id_cat');
    }
 
 }

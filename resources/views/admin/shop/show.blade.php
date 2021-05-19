@@ -2,6 +2,13 @@
 
 @include('admin.app.header')
 <!-- Page Content -->
+<?php
+foreach ($category as $item ){
+if($item->id==$detal->id_cat)
+    $turkum=$item->name;
+}
+
+?>
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row bg-title">
@@ -9,7 +16,7 @@
                 <h4 class="page-title">Xabarni o'qish</h4>
                 <ol class="breadcrumb">
                     <li><a href="#">Uy Sahifa</a></li>
-                    <li><a href="">Market</a></li>
+                    <li><a href="{{route('admin.market.index')}}">Market</a></li>
                     <li><a class="active">ko'rish</a></li>
                 </ol>
             </div>
@@ -25,6 +32,10 @@
                                 <th scope="row">Foto:</th>
                                 <td>  <img class="img img-thumbnail" width="160px"  src="/upload/shop_images/{{$detal->shop_img}}" alt="Rasm topilmadi!">
                                 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Turkum:</th>
+                                <td>{{$turkum}}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Nomi:</th>

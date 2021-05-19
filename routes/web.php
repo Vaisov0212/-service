@@ -17,7 +17,11 @@ Route::get('/', 'SiteController@index')->name('index');
 Route::get('/About-us', 'SiteController@about_us')->name('aboutUs');
 Route::get('/Service', 'SiteController@service')->name('service');
 Route::post('/Reference','SiteController@reference')->name('reference')->middleware('user');
-Route::get('Market','SiteController@shop')->name('market');
+Route::get('/Market/{category}','SiteController@shop')->name('market');
+Route::get('/Contact-us','SiteController@conatct')->name('contact');
+Route::post('/messege','SiteController@contactsef')->name('messege')->middleware('user');
+
+Route::get('/Market/{category}/{id}','SiteController@shop_show')->name('market-show')->where(['id' => '[0-9]+', 'nameid' => '[0-9]+']);
 
 Route::namespace('Admin')->middleware('admin')->name('admin.')->prefix('/dashboard')->group(function(){
     Route::get('/', function(){
@@ -27,6 +31,7 @@ Route::namespace('Admin')->middleware('admin')->name('admin.')->prefix('/dashboa
     Route::resource('/feedback','FeedbackController');
     Route::resource('/profile','ProfileController');
     Route::resource('/market','ShopController');
+    Route::resource('/contact-us','ContactController');
 
 });
 Auth::routes();

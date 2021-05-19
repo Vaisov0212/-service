@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
+use App\Category;
 use \App\Http\Controllers\Controller;
 use \App\shoping;
-
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Intervention\Image\ImageManagerStatic;
@@ -20,8 +21,10 @@ class ShopController extends Controller
     public function index()
     {
 
-        $detals=shoping::all();
-       return view('admin.shop.index',compact('detals'));
+        $detals=shoping::orderBy('id','desc')->paginate(15);
+        $links=$detals->links();
+
+       return view('admin.shop.index',compact('detals','links'));
     }
 
     /**
@@ -31,7 +34,8 @@ class ShopController extends Controller
      */
     public function create()
     {
-        return view('admin.shop.create');
+        $category=$this->getAllCategory();
+        return view('admin.shop.create',compact('category'));
     }
 
     /**
@@ -44,6 +48,7 @@ class ShopController extends Controller
     {
         $this->validate($request,[
         'name'=>'required',
+        'id_cat'=>'required',
         'money'=>'required',
         'description'=>'required',
         'select_file'=>'required'
@@ -62,6 +67,7 @@ class ShopController extends Controller
 
         $detal=new Shoping([
             'name'=>$request->get('name'),
+            'id_cat'=>$request->get('id_cat'),
             'money'=>$request->get('money'),
             'description'=>$request->get('description'),
              'shop_img'=>$new_name
@@ -80,7 +86,8 @@ class ShopController extends Controller
     public function show($id)
     {
         $detal=Shoping::findOrFail($id);
-        return view('admin.shop.show',compact('detal'));
+        $category=$this->getAllCategory();
+        return view('admin.shop.show',compact('detal','category'));
     }
 
     /**
@@ -92,7 +99,8 @@ class ShopController extends Controller
     public function edit($id)
     {
         $detal=shoping::findOrFail($id);
-        return view('admin.shop.edit',compact('detal'));
+        $category=$this->getAllCategory();
+        return view('admin.shop.edit',compact('detal','category'));
     }
 
     /**
@@ -108,13 +116,14 @@ class ShopController extends Controller
         $detal= shoping::findOrFail($id);
         $this->validate($request,[
             'name'=>'required',
+            'id_cat'=>'required',
             'money'=>'required',
             'description'=>'required'
         ]);
 
         if($request->file('select_file'))
         {
-            Storage::disk('/public')->delete('/upload/shop_images/'.$detal->shop_img);
+            Storage::disk('upload')->delete('upload/shop_images/'.$detal->shop_img);
 
             //  image upload
             $new_name=microtime().".jpg";
@@ -136,8 +145,11 @@ class ShopController extends Controller
                 'name'=>$request->post('name'),
                 'description'=>$request->post('description'),
                 'money'=>$request->post('money'),
+                'id_cat'=>$request->post('id_cat'),
                 'img'=>$new_name
         ]);
+        $detal->save();
+        return redirect()->route('admin.market.index')->with('success','malumotlar yangilanadi !');
 
     }
 
@@ -153,5 +165,9 @@ class ShopController extends Controller
         $detal=shoping::findOrFail($id);
         $detal->delete();
         return redirect()->back()->with('delete','malumot o`chirildi');
+    }
+
+    private function getAllCategory(){
+        return Category::all();
     }
 }

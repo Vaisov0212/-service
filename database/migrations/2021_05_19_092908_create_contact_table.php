@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShoppingsTable extends Migration
+class CreateContactTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateShoppingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('shoppings', function (Blueprint $table) {
+        Schema::create('contact', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->text('description');
-            $table->integer('money');
-            $table->string('shop_img');
+            $table->string('email');
+            $table->string('subject');
+            $table->text('massege');
+            $table->boolean('views');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateShoppingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shoppings');
+        Schema::dropIfExists('contact');
     }
 }

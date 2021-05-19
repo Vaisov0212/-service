@@ -46,7 +46,7 @@
 						<h2 class="fw-title">Contact Us</h2>
 						<div class="footer-info-box">
 							<div class="fib-icon">
-								<img src="img/icons/map-marker.png" alt="" class="">
+								<img src="{{asset('img/icons/map-marker.png')}}" alt="" class="">
 							</div>
 							<div class="fib-text">
 								<p>Main Str, no 23 NY,<br>New York PK 23589</p>
@@ -54,7 +54,7 @@
 						</div>
 						<div class="footer-info-box">
 							<div class="fib-icon">
-								<img src="img/icons/phone.png" alt="" class="">
+								<img src="{{asset('img/icons/phone.png')}}" alt="" class="">
 							</div>
 							<div class="fib-text">
 								<p>+546 990221 123<br>contact@industryalinc.com</p>
@@ -94,13 +94,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Search model end -->
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/jquery.slicknav.min.js')}}"></script>
+	<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('js/circle-progress.min.js')}}"></script>
+	<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{asset('js/main.js')}}"></script>
 
 </body>
 </html>
