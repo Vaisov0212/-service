@@ -66,6 +66,7 @@ class SiteController extends Controller
 
     public function shop($id){
         $user=$this->getUser();
+        $fours=Shoping::orderBy('id','desc')->limit(4);
         $category=Category::all();
         if($id==0){
             $model=Shoping::orderBy('id','desc')->paginate(12);
@@ -77,7 +78,7 @@ class SiteController extends Controller
             $links=$model->links();
         }
 
-        return view('market',compact('user','model','links','category'));
+        return view('market',compact('user','model','links','category','fours'));
     }
 
     public function shop_show($id){
@@ -124,5 +125,11 @@ class SiteController extends Controller
             else{
                 return $user=null;
             }
+        }
+
+        public function switchLang($lang)
+        {
+            session()->put('lang',$lang);
+            return redirect()->back();
         }
 }

@@ -20,8 +20,8 @@
 					<div class="row">
 						<div class="col-xl-8">
 							<h2><span>Power</span><span>& Energy</span></h2>
-							<a href="#" class="site-btn sb-white mr-4 mb-3">Read More</a>
-							<a href="#" class="site-btn sb-dark">our Services</a>
+							<a href="#" class="site-btn sb-white mr-4 mb-3">@lang('kirish')</a>
+							<a href="#" class="site-btn sb-dark">@lang('ro`yhatdan o`tish')</a>
 						</div>
 					</div>
 				</div>
@@ -41,9 +41,9 @@
 								<div class="si-icon">
 									<img src="img/icons/cogwheel.png" alt="">
 								</div>
-								<h5>Mechanical Engineering</h5>
+								<h5>@lang('Mashinasozlik')</h5>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. </p>
+							<p>@lang('Lorem ipsum dolor sit amet, konsultator adipiscing elit. Har bir klinik chili, ehtiyotkorlik bilan o`tirgan a`zolar orasida.') </p>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6">
@@ -117,7 +117,7 @@
 						<div class="fb-text">
 							<h5>Chemichal Reserach</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipi-scing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-							<a href="" class="fb-more-btn">Read More</a>
+
 						</div>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 						<div class="fb-text">
 							<h5>Engineering</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipi-scing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-							<a href="" class="fb-more-btn">Read More</a>
+
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,6 @@
 						<div class="fb-text">
 							<h5>Manufactoring</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipi-scing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-							<a href="" class="fb-more-btn">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -200,19 +199,11 @@
 							<div class="testimonial-slider owl-carousel">
 								<div class="testimonial">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consecte-tur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est.</p>
-									<img src="img/testimonial-thumb.jpg" alt="" class="testi-thumb">
-									<div class="testi-info">
-										<h5>Michael Smith</h5>
-										<span>CEO Industrial INC</span>
-									</div>
+
 								</div>
 								<div class="testimonial">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consecte-tur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est.</p>
-									<img src="img/testimonial-thumb.jpg" alt="" class="testi-thumb">
-									<div class="testi-info">
-										<h5>Michael Smith</h5>
-										<span>CEO Industrial INC</span>
-									</div>
+
 								</div>
 							</div>
 						</div>
@@ -231,7 +222,7 @@
 					<div class="video-text">
 						<h2>We produce or supply Goods, & Services</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur.</p>
-						<a href="#" class="site-btn">contact us</a>
+
 					</div>
 				</div>
 				<div class="col-lg-6">

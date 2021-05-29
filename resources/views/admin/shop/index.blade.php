@@ -51,8 +51,10 @@
                                 <tr>
                                     <th width="100px">Foto</th>
                                     <th>Nomi:</th>
+                                    <th>narxi:</th>
                                     <th>qo'shilgan sana:</th>
                                     <th>amallar:</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,6 +63,7 @@
                                     <img class="img img-thumbnail" width="80px" src="/upload/shop_images/{{$item->shop_img}}" alt="Rasm topilmadi!">
                                 </td>
                                     <td>{{$item->name}}</td>
+                                    <td>{{$item->money}} <a class="text-danger" >so'm</a></td>
                                     <td>{{$item->created_at->format("Y - d - M  H:m")}}</td>
                                     <td>
                                         <div style="display:flex; padding-top: 10px; padding-bottom:10px;"  >

@@ -6,13 +6,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-widget about-widget">
 						<img src="img/logo-light.png" alt="">
-						<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. </p>
-						<div class="footer-social">
-							<a href=""><i class="fa fa-facebook"></i></a>
-							<a href=""><i class="fa fa-twitter"></i></a>
-							<a href=""><i class="fa fa-dribbble"></i></a>
-							<a href=""><i class="fa fa-behance"></i></a>
-						</div>
+						<p> consec-tetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. </p>
+
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
@@ -23,8 +18,7 @@
 							<li><a href="">Client Testimonials</a></li>
 							<li><a href="">Green  Energy</a></li>
 							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">About our Work</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -36,8 +30,7 @@
 							<li><a href="">Agricultural Engineering</a></li>
 							<li><a href="">Green  Energy</a></li>
 							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">Manufactoring</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -60,10 +53,7 @@
 								<p>+546 990221 123<br>contact@industryalinc.com</p>
 							</div>
 						</div>
-						<form class="footer-search">
-							<input type="text" placeholder="Search">
-							<button><i class="fa fa-search"></i></button>
-						</form>
+
 					</div>
 				</div>
 			</div>

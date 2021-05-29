@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Uz">
+<html lang="{{app()->getLocale()}}}}">
 <head>
 	<title>Industry.INC | HTML Template</title>
 	<meta charset="UTF-8">
@@ -45,7 +45,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>@lang('Haytoda doyim oldinga intl...')</p>
 					</div>
 					<div class="col-md-6 text-md-right">
 
@@ -58,10 +58,10 @@
 			<a href="index.html" class="site-logo">
 				<img src="{{asset('img/logo.png')}}" alt="">
 			</a>
-            <a href="index.html">
+            <a href="{{route('switch.Lang','uz')}}">
 				Uz
 			</a>
-            <a href="index.html">
+            <a  href="{{route('switch.Lang','ru')}}">
 				Ru
 			</a>
 			<div class="header-right">
@@ -70,26 +70,26 @@
 			<!-- Menu -->
 			<nav class="site-nav-menu">
 				<ul>
-					<li @if($title=="index") class="active" @endif><a href="{{route('index')}}">Bosh sahifa</a></li>
-					<li @if($title=="about") class="active" @endif><a href="{{route('aboutUs')}}">Biz xaqimizda</a></li>
-					<li @if($title=="service") class="active" @endif><a href="{{route('service')}}">Xizmatlar</a></li>
-                    <li @if($title=="Market") class="active" @endif><a href="{{route('market',$ctegoryId=0)}}">Market</a></li>
-                    <li @if($title=="Bog`lanish") class="active" @endif><a href="{{route('contact')}}">Bog'lanish</a></li>
+					<li @if($title=="index") class="active" @endif><a href="{{route('index')}}">@lang('Bosh sahifa')</a></li>
+					<li @if($title=="about") class="active" @endif><a href="{{route('aboutUs')}}">@lang('Biz xaqimizda')</a></li>
+					<li @if($title=="service") class="active" @endif><a href="{{route('service')}}">@lang('Xizmatlar')</a></li>
+                    <li @if($title=="Market") class="active" @endif><a href="{{route('market',$ctegoryId=0)}}">@lang('Market')</a></li>
+                    <li @if($title=="Bog`lanish") class="active" @endif><a href="{{route('contact')}}">@lang('Bog`lanish')</a></li>
 
 
                     @if($user==null)
-					<li ><a href="{{route('login')}}" >kirish</a></li>
-					<li><a {{route('register')}} >ro'yhatdan o'tish</a></li>
+					<li ><a href="{{route('login')}}">@lang('kirish')</a></li>
+					<li><a {{route('register')}} >@lang('ro`yhatdan o`tish')</a></li>
                      @endif
                      @auth
                     <li><a >{{$user->name}}</a>
 						<ul class="sub-menu" >
-                            <li><button class="btn btn-succes"  type="submit"><a >profil</a></button></li>
-							<li><button class="btn btn-succes"  type="submit"><a >savatcha</a></button></li>
+                            <li><button class="btn btn-succes"  type="submit"><a >@lang('profil')</a></button></li>
+							<li><button class="btn btn-succes"  type="submit"><a >@lang('savatcha')</a></button></li>
                             <form method="post" action="{{route('logout')}}">
                              @csrf
 
-                            <li><button class="btn btn-succes"  type="submit"><a >chiqish</a></button></li>
+                            <li><button class="btn btn-succes"  type="submit"><a >@lang('chiqish')</a></button></li>
                             </form>
 
 						</ul>

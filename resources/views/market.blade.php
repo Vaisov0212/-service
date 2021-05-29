@@ -8,7 +8,7 @@
             <div class="col-lg-7">
                 <h2>Our Solutions</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-                <a href="" class="site-btn">Contact us</a>
+
             </div>
         </div>
     </div>
@@ -35,30 +35,18 @@
                     </ul>
                 </div>
                 <div class="sb-widget">
-                    <h2 class="sb-title">Categories</h2>
+                    <h2 class="sb-title">yangi tavarlar</h2>
+                    @foreach ($fours as $four)
                     <div class="recent-post">
                         <div class="rp-item">
-                            <img src="{{asset('img/blog/recent-post/1.jpg')}}" alt="">
+                            <img src="/upload/shop_images/{{$four->shop_img}}"  alt="">
                             <div class="rp-text">
                                 <p>All you need to know about Oil</p>
-                                <div class="rp-date">08 Feb, 2019</div>
-                            </div>
-                        </div>
-                        <div class="rp-item">
-                            <img src="{{asset('img/blog/recent-post/2.jpg')}}" alt="">
-                            <div class="rp-text">
-                                <p>All you need to know about Oil</p>
-                                <div class="rp-date">08 Feb, 2019</div>
-                            </div>
-                        </div>
-                        <div class="rp-item">
-                            <img src="{{asset('img/blog/recent-post/3.jpg')}}" alt="">
-                            <div class="rp-text">
-                                <p>All you need to know about Oil</p>
-                                <div class="rp-date">08 Feb, 2019</div>
+                                <div class="rp-date">{{$four->created_at->format("Y-M -d H:m")}}}}</div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
                 <div class="sb-widget">
                     <div class="info-box">
@@ -94,7 +82,7 @@
                         <br>
                         <div style="display: flex;" >
                         <button href="#" class="btn btn-sm btn-success"><a style="padding:2px; margin:1px "  >+ savatga </a></button>
-                        <a href="{{route('market-show',['id'=>1,'nameid'=>1])}}" class="btn btn-sm btn-info" style="margin-left: 2px" ><a style="padding:2px; margin-left:2px "  >malumot</a></a>
+                        <button href="{{route('market-show',['id'=>1,'nameid'=>1])}}" class="btn btn-sm btn-info" style="margin-left: 2px" ><a style="padding:2px; margin-left:2px "  >malumot</a></button>
                         </div>
                     </div>
                 </div>

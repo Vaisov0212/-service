@@ -10,7 +10,7 @@ Class SendTelegramService
     {
 
         $telegram_user_id   =977739889;
-        $telegram_bot_token ='bot1828898601:AAFx2ylbzlLkCg_g34mUZtq44ah00131utQ';
+        $telegram_bot_token ='bot1464725841:AAFYK6FU0HvC7b6HGJTZDtKSvuMQX5Fyr2s';
 
         //Start
         $url = 'https://api.telegram.org/'.$telegram_bot_token.'/sendMessage?text=:text_content&chat_id='.$telegram_user_id;

@@ -7,7 +7,7 @@
 				<div class="col-lg-7">
 					<h2>About us</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-					<a href="" class="site-btn">Contact us</a>
+
 				</div>
 			</div>
 		</div>
@@ -113,7 +113,6 @@
 						<div class="member-info">
 							<h3>Michael Smith</h3>
 							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
 						</div>
 					</div>
 				</div>
@@ -123,7 +122,6 @@
 						<div class="member-info">
 							<h3>Jessica Steing</h3>
 							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
 						</div>
 					</div>
 				</div>
@@ -133,7 +131,6 @@
 						<div class="member-info">
 							<h3>Chris Williams</h3>
 							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
 						</div>
 					</div>
 				</div>
